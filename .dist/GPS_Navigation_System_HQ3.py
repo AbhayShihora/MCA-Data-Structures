@@ -20,3 +20,32 @@ backword=[]
 forword=[]
 current=None
 
+def visit(place):
+    global current
+    backword.append(current)
+    current=place
+    forword=[]
+    print("Current is : ",current)
+    
+def back():
+    global current
+    forword.append(current)
+    current=backword.pop()
+    print("After Backword Current is : ",current)
+
+def forw():
+    global current
+    backword.append(current)
+    current=forword.pop()
+    print("After Forword Current is : ",current)
+
+
+#Dry run
+visit("Palitana")
+visit("Bhavnagar")
+visit("Ahmedabad")
+visit("Garden")
+
+back()
+back()
+forw()
