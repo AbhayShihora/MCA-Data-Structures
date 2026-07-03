@@ -16,6 +16,7 @@ blacklist = ["scam99@gmail.com",
             "duplicate@gmail.com",
             "win@lottery.com"]
 
+#method for spam detecter
 def spam_det(email):
     for i in blacklist:
         if i==email:
